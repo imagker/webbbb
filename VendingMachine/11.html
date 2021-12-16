@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <audio id="MS">
+    <source id="MSS" src=""> 
+  </audio>
+
+  <div>
+    <button class="playBtn">play</button>
+  </div>
+  <script>
+    const MS = document.querySelector('#MS');
+    const playBtn = document.querySelector('.playBtn');
+
+    function playAudio(){
+      MS.volume = 0.1;
+      MS.loop = false;
+      MS.play();
+    }
+    function stopAudio(){
+      MS.pause();
+    }
+    function loadAudio(){
+      const source = document.querySelector('#MSS');
+      source.src = './audio/money.mp3';
+      MS.load();
+      playAudio();
+    }
+
+    playBtn.addEventListener('click', loadAudio);
+  </script>
+</body>
+</html>

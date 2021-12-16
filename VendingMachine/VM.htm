@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VM</title>
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="shortcut icon" href="./img/smily.ico">
+  <script defer src="./js/app.js"></script>
+</head>
+<body>
+
+  <!-- 자판기에 음료수 3개가 있고, 
+  각각 300원, 500원 700원이에요. 
+  동전넣는 투입기를 버튼으로 만드시고, 
+  클릭할때마다 100원씩 늘어나고, 
+  현재 얼마 넣었는지, html에 나오게 해주시고, 
+  넣은돈이 음료수의 값보다 같거나 많으면 
+  A음료수 선택가능 이런식으로 색상이 바뀌게 해주세요.
+
+  1. 총 4개의 버튼을 가지고 있는 자판기를 만든다.
+  2. a,b,c 버튼은 선택하면 음료가 나오는 버튼. D버튼은 선택시 100원씩 증가하는 버튼. 
+  3. D버튼을 1회 누를 때 마다의 값을 html으로 출력한다.
+  4. 100원씩 증가하는 값이 a,b,c 각각의 값 이상일 때 해당하는 음료수를 선택가능으로 변경한다.  -->
+
+  <main class="VM">
+    <div class="bg"><img src="./img/VMimg/VM.png" alt="bg"></div>
+
+    <!-- 음료 off 이미지 -->
+    <div class="D1"><img src="./img/VMimg/D1_off.png" alt="Drink1"></div>
+    <div class="D2"><img src="./img/VMimg/D2_off.png" alt="Drink2"></div>
+    <div class="D3"><img src="./img/VMimg/D3_off.png" alt="Drink3"></div>
+
+    <!-- 음료 버튼  -->
+    <button class="B1"><img src="./img/VMimg/0.3_off.png" alt="$0.3"></button>
+
+    <button class="B2"><img src="./img/VMimg/0.5_off.png" alt="$0.5"></button>
+
+    <button class="B3"><img src="./img/VMimg/0.7_off.png" alt="$0.7"></button>
+
+    <!-- 동전 투입구 -->
+    <button class="MB"><img src="./img/VMimg/button_B.png" alt=""></button>
+    <div class="text"> Money you got : <span class="CM">$ 0</span></div>
+  </main>
+  <audio id="MS">
+    <source id="MSS" src="">
+  </audio>
+</body>
+</html>
