@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>자리배치</title>
+</head>
+<body>
+  <div></div>
+  <script>
+    const pN= prompt('몇명인가요');
+    const pIr= prompt('한줄에 몇명앉나요');
+    const rest = pN%pIr
+    const CN = pN/pIr 
+    let rN;
+
+    if (pN !== null && pIr !== null) 
+      (rest === 0 ) ? rN = CN : rN = CN + 1 ;
+    
+    for (let i = 1 ; i <= rN ; i++) {
+      for (let k = 1 ; k <= pIr; k++) {
+        let j = (i-1)*10+k;
+        document.write(`좌석${j}`)
+      }
+      document.write(`<br>`)
+    }
+
+    
+      /*i는 총인원수 만큼 실행 
+      k 는 한줄에 몇명 앉는지 
+      그러면 k 가 실행한 뒤에 br을 실행하고 
+      그것을 rN 만큼 반복 
+      그러면 좌석i 을 k 만큼 rN번 실행 */
+  </script>
+</body>
+
+</html>
