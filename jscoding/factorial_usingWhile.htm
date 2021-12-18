@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>while문을 이용한 ! 계산</title>
+  <style>
+    *{margin: 0; padding: 0; box-sizing: border-box;}
+    body { width: 100vw; height: 100vh;}
+    div { display: flex; justify-content: center; align-items: center; width: 100%; height: 100%; font-size: 2rem; flex-direction: column;}  
+  </style>
+</head>
+<body>
+  <script>
+    const num = prompt('type #')
+    // console.log(typeof num); -> string
+    //prompt -> string 값으로 가져옴;; num으로 가져오길 원함. 
+    //string 값으로 가져온 prompt 값을 number로 변환시켜줌 
+    const numG = Number(num);
+
+    // console.log(numG);
+    //위에서 Num 값으로 바꾸었기에 숫자가 아닌 값 입력시 NaN 표시 그럼으로 NaN 일때를 배재해야 되는데 NaN === NaN false 가 나오기에 NaN을 판별하기 위한 함수인 isNaN()을 사용한다.
+    if (!Number.isNaN(numG)) {
+      let nFact = 1;
+      let i = 1; 
+      document.write(`<div> <h3> Factorial 계산 </h3> <br>`);
+      document.write(`${numG}! = 1`);
+      while ( i <= numG ) {
+        // nFact = nFact * i; 
+        nFact *= i;
+        i++;
+        console.log(i);
+        if ( i <= numG) {
+          document.write(` x ${i}`)
+        } else {};
+      }
+      document.write(` = ${nFact}`);
+      document.write(`</div>`);
+    } else {
+      alert('숫자를 입력하시오')
+    }
+  </script>
+</body>
+</html>
